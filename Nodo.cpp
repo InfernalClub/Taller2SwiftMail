@@ -1,6 +1,5 @@
 #include "Nodo.h"
 
-
 template<class N>
 Nodo::Nodo(N dato) {
 

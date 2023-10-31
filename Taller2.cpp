@@ -1,8 +1,14 @@
 #include <iostream>
+#include "SistemaSMT.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    
+
+    SistemaSMT* sistema = new SistemaSMT;
+
+    sistema->leer_archivo();
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
@@ -16,6 +22,8 @@ int main()
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
 
+
+/*
 
 //esto es un ejemplo de ingresarArchivo
 void manejoArchivos() {
@@ -112,5 +120,6 @@ void manejoArchivos() {
     archivoSalida << nombreMejor << "," << rutMejor << "," << mejor;
     //Cerramos el archivo
     archivoSalida.close();
-
+    
 }
+**/

@@ -24,6 +24,9 @@
     <ClCompile Include="Aduana.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SistemaSMT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Nodo.h">
@@ -32,5 +35,11 @@
     <ClInclude Include="Aduana.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SistemaSMT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\Downloads\Aduana1.txt" />
   </ItemGroup>
 </Project>

@@ -15,6 +15,7 @@ void SistemaSMT::leer_archivo()
 	}
 	archivo.open("Aduana1.txt");
 
+	//si el archivo falla
 	if (archivo.fail()) {
 		cout << "No se pudo abrir el archivo" << endl;
 		exit(1);
@@ -54,7 +55,7 @@ void SistemaSMT::leer_archivo()
 				<< ", Numero de seguimiento: " << numero_Seguimiento << ", Fecha de recepcion: " << fecha_recepcion
 				<< ", Valor base: " << valor_base << ", Telefono: " << telefono
 				<< ", Peso del paquete: " << peso_paquete << ", Dimensiones: " << dimensiones
-				<< ", Fragilidad: " << fragil << ", Direccion: " << direccion << std::endl;
+				<< ", Fragilidad: " << fragil << ", Direccion: " << direccion << endl;
 		}
 		catch (const exception& e) {
 			cout << "error en la conversion de valores" << e.what() << endl;

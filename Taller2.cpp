@@ -121,12 +121,7 @@ void Sistema::menuSucursal()
 
 
 
-
-
-
-
-
-
+/*
 
 int main()
 {
@@ -137,7 +132,7 @@ int main()
     sistema->leer_archivo();
     
 }
-
+*/
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 

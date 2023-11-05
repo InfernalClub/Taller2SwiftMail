@@ -1,8 +1,7 @@
 #include <iostream>
 #include "Nodo.h"
 #include "Aduana.h"
-
-Nodo::Nodo(Aduana* aduana) {
+/*Nodo::Nodo(Aduana* aduana) {
 	this->hijo_der = nullptr;
 	this->hijo_iqz = nullptr;
 	this->aduana = aduana;
@@ -24,7 +23,7 @@ Nodo* Nodo::get_hijo_izq()
 {
 	return this->hijo_iqz;
 }
-
+*/
 using namespace std;
 void Arbol::insertarNodo(int Codigo)
 {
@@ -74,6 +73,11 @@ void Arbol::printNodos()
 	}
 
 	printNodos(root);
+
+}
+
+void Arbol::insertarNodo_AVL(int codigo)
+{
 
 }
 

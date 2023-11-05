@@ -2,6 +2,7 @@
 #include "Nodo.h"
 class ABB
 {
+	/*
 private:
 	Nodo* raiz;
 public:
@@ -16,6 +17,6 @@ public:
 
 	void insertarNodo(Aduana* aduana,int valor_paquete);
 
-	void buscarValor(int valor_paquete);
+	void buscarValor(int valor_paquete);*/
 };
 

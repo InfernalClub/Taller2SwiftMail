@@ -27,7 +27,15 @@
     <ClCompile Include="SistemaSMT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< Updated upstream
     <ClCompile Include="Sistema.cpp">
+=======
+<<<<<<< HEAD
+    <ClCompile Include="ABB.cpp">
+=======
+    <ClCompile Include="Sistema.cpp">
+>>>>>>> 64a111173a5ead5b77a08996c0e5d0cff2752853
+>>>>>>> Stashed changes
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +49,15 @@
     <ClInclude Include="SistemaSMT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< Updated upstream
     <ClInclude Include="Taller2.h">
+=======
+<<<<<<< HEAD
+    <ClInclude Include="ABB.h">
+=======
+    <ClInclude Include="Taller2.h">
+>>>>>>> 64a111173a5ead5b77a08996c0e5d0cff2752853
+>>>>>>> Stashed changes
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

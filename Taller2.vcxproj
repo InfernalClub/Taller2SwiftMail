@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ABB.cpp" />
     <ClCompile Include="Aduana.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Sistema.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="Taller2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ABB.h" />
     <ClInclude Include="Aduana.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="SistemaSMT.h" />

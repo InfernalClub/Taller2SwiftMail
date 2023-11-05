@@ -1,26 +1,28 @@
 #pragma once
+#include "Aduana.h"
 using namespace std;
 
-template <class N>
 class Nodo
 {
 private:
-	Nodo<N>* hijo_iqz;
-	Nodo<N>* hijo_der;
-    N dato;
+	Nodo* hijo_iqz;
+	Nodo* hijo_der;
+	Aduana* aduana;
 public:
-	Nodo(N dato);
+	Nodo(Aduana* aduana);
 
-	N getdato();
+	~Nodo();
 
-	Nodo<N>* getHijo_izq();
+	Aduana* get_aduana();
 
-	Nodo<N>* getHijo_der();
+	Nodo* get_hijo_izq();
 
-	void setDato(N dato);
+	Nodo* get_hijo_der();
 
-	void setHijo_izq(Nodo<N>* hijo_izq);
+	void set_aduana(Aduana* aduana);
 
-	void setHijo_der(Nodo<N>* hijo_der);
+	void set_hijo_izq(Nodo* hijo_izq);
+
+	void set_hijo_der(Nodo* hijo_der);
 
 };

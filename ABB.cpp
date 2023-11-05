@@ -9,8 +9,9 @@ ABB::~ABB()
 {
 }
 
-void ABB::insertarNodo(Aduana* aduana)
+void ABB::insertarNodo(Aduana* aduana, int valor_paquete)
 {
+
 
 }
 

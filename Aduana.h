@@ -15,8 +15,6 @@ private:
 	string contenido_fragil;
 	string direccion;
 
-
-
 public:
 
 	Aduana(string codigo, string tipo_envio, string numero_seguimiento, string fecha_recepcion_aduana,

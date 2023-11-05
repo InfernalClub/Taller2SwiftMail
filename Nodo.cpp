@@ -1,5 +1,29 @@
 #include <iostream>
 #include "Nodo.h"
+#include "Aduana.h"
+
+Nodo::Nodo(Aduana* aduana) {
+	this->hijo_der = nullptr;
+	this->hijo_iqz = nullptr;
+	this->aduana = aduana;
+}
+
+Nodo::~Nodo()
+{
+	this->hijo_der = nullptr;
+	this->hijo_iqz = nullptr;
+	this->aduana -> ~Aduana();
+}
+
+Aduana* Nodo::get_aduana()
+{
+	return this->aduana;
+}
+
+Nodo* Nodo::get_hijo_izq()
+{
+	return this->hijo_iqz;
+}
 
 using namespace std;
 void Arbol::insertarNodo(int Codigo)

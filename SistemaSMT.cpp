@@ -2,11 +2,13 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "Nodo.h"
 using namespace std;
 
 void SistemaSMT::leer_archivo()
 {
 	ifstream archivo;
+	Arbol ArbolBB;
 
 	//si el archivo no existe
 	if (!archivo) {
@@ -60,6 +62,7 @@ void SistemaSMT::leer_archivo()
 		catch (const exception& e) {
 			cout << "error en la conversion de valores" << e.what() << endl;
 		}
+		ArbolBB.insertarNodo(valor_base);
 	
 	}
 	archivo.close();

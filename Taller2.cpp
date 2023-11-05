@@ -2,6 +2,7 @@
 #include "SistemaSMT.h"
 #include "Taller2.h"
 
+SistemaSMT sistema;
 
 int opcion;
 Sistema::Sistema()
@@ -12,6 +13,7 @@ Sistema::Sistema()
 
 void Sistema:: menuInicial()
 {
+
     cout << "********************************* \n";
     cout << "Menú Sistema de Envíos \n";
     cout << "********************************* \n";
@@ -55,7 +57,7 @@ void Sistema::menuAduana()
     switch (opcion)
     {
     case 1:
-        
+        sistema.leer_archivo();
         break;
 
     case 2:

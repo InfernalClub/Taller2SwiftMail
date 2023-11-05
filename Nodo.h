@@ -1,26 +1,37 @@
 #pragma once
+
+#include <iostream>
 using namespace std;
 
-template <class N>
-class Nodo
+struct hoja
 {
-private:
-	Nodo<N>* hijo_iqz;
-	Nodo<N>* hijo_der;
-    N dato;
+	int Codigo;
+
+	hoja* papa;
+	hoja* hijizq;
+	hoja* hijoder;
+
+	hoja() {};
+
+	hoja(int leerCod)
+	{
+		Codigo = leerCod;
+		papa = NULL;
+		hijizq = NULL;
+		hijoder = NULL;
+	}
+};
+
+class Arbol
+{
 public:
-	Nodo(N dato);
+	Arbol();
+	~Arbol();
+	void insertarNodo(int Codigo);
+	void printNodos();
 
-	N getdato();
 
-	Nodo<N>* getHijo_izq();
-
-	Nodo<N>* getHijo_der();
-
-	void setDato(N dato);
-
-	void setHijo_izq(Nodo<N>* hijo_izq);
-
-	void setHijo_der(Nodo<N>* hijo_der);
-
+private:
+	void printNodos(hoja* nodoActual);
+	hoja* root = NULL;
 };

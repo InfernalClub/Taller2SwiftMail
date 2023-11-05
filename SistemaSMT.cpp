@@ -27,15 +27,15 @@ void SistemaSMT::leer_archivo()
 
 	while (getline(archivo, linea)) {
 		
-		string codigo_aduana, numero_Seguimiento,
+		string codigo_aduanaStr, numero_Seguimiento,
 			fecha_recepcion, direccion,tipo_envio,dimensiones, fragil,
 			valor_baseStr,peso_paqueteStr,telefonoStr;
-		int valor_base,telefono;
+		int codigo_aduana,valor_base,telefono;
 		float  peso_paquete;
 
 		stringstream lector_linea(linea);
 
-		getline(lector_linea, codigo_aduana, ',');
+		getline(lector_linea, codigo_aduanaStr, ',');
 		getline(lector_linea, tipo_envio, ',');
 		getline(lector_linea, numero_Seguimiento, ',');
 		getline(lector_linea, fecha_recepcion, ',');
@@ -49,6 +49,7 @@ void SistemaSMT::leer_archivo()
 		//convertir valores
 
 		try {
+			codigo_aduana = stoi(codigo_aduanaStr);
 			valor_base = stoi(valor_baseStr);
 			telefono = stoi(telefonoStr);
 			peso_paquete = stof(peso_paqueteStr);
@@ -62,7 +63,7 @@ void SistemaSMT::leer_archivo()
 		catch (const exception& e) {
 			cout << "error en la conversion de valores" << e.what() << endl;
 		}
-		ArbolBB.insertarNodo(valor_base);
+		ArbolBB.insertarNodo(codigo_aduana);
 	
 	}
 	archivo.close();
@@ -72,14 +73,14 @@ void SistemaSMT::leer_archivo()
 void SistemaSMT::leer_archivo_sucursal()
 {
 	ifstream archivo;
-	Arbol ArbolBB;
+	Arbol ArbolAVL;
 
 	//si el archivo no existe
 	if (!archivo) {
-		cout << "Error al abrir el archivo: " << strerror(errno) << std::endl;
+		cout << "Error al abrir el archivo: " << strerror(errno) << endl;
 		return;
 	}
-	archivo.open("Aduana1.txt");
+	archivo.open("Sucursal1.txt");
 
 	//si el archivo falla
 	if (archivo.fail()) {
@@ -91,42 +92,32 @@ void SistemaSMT::leer_archivo_sucursal()
 
 	while (getline(archivo, linea)) {
 
-		string codigo_aduana, numero_Seguimiento,
-			fecha_recepcion, direccion, tipo_envio, dimensiones, fragil,
-			valor_baseStr, peso_paqueteStr, telefonoStr;
-		int valor_base, telefono;
-		float  peso_paquete;
+		string codigo_paqueteStr, codigoSMT, repartidor, tiempo_entregaSTR;
+		int tiempo_entrega,codigo_paquete;
+		
 
 		stringstream lector_linea(linea);
 
-		getline(lector_linea, codigo_aduana, ',');
-		getline(lector_linea, tipo_envio, ',');
-		getline(lector_linea, numero_Seguimiento, ',');
-		getline(lector_linea, fecha_recepcion, ',');
-		getline(lector_linea, valor_baseStr, ',');
-		getline(lector_linea, telefonoStr, ',');
-		getline(lector_linea, peso_paqueteStr, ',');
-		getline(lector_linea, dimensiones, ',');
-		getline(lector_linea, fragil, ',');
-		getline(lector_linea, direccion, ',');
-
+		getline(lector_linea, codigo_paqueteStr, ',');
+		getline(lector_linea, codigoSMT, ',');
+		getline(lector_linea, repartidor, ',');
+		getline(lector_linea, tiempo_entregaSTR, ',');
+		
 		//convertir valores
 
 		try {
-			valor_base = stoi(valor_baseStr);
-			telefono = stoi(telefonoStr);
-			peso_paquete = stof(peso_paqueteStr);
-
-			cout << "Codigo de aduana: " << codigo_aduana << ", Tipo de envio: " << tipo_envio
-				<< ", Numero de seguimiento: " << numero_Seguimiento << ", Fecha de recepcion: " << fecha_recepcion
-				<< ", Valor base: " << valor_base << ", Telefono: " << telefono
-				<< ", Peso del paquete: " << peso_paquete << ", Dimensiones: " << dimensiones
-				<< ", Fragilidad: " << fragil << ", Direccion: " << direccion << endl;
+			tiempo_entrega = stoi(tiempo_entregaSTR);
+			codigo_paquete = stoi(codigo_paqueteStr);
+			
+			
+			cout << "Codigo de paquete: " << codigo_paquete << ", codigo SMT: " << codigoSMT
+				<< ", Nombre repartidor: " << repartidor <<", Tiempo entrega"<< tiempo_entrega <<  endl;
 		}
 		catch (const exception& e) {
 			cout << "error en la conversion de valores" << e.what() << endl;
 		}
-		ArbolBB.insertarNodo(valor_base);
+
+		ArbolAVL.insertarNodo(codigo_paquete);
 
 	}
 	archivo.close();

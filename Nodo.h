@@ -29,6 +29,7 @@ public:
 	~Arbol();
 	void insertarNodo(int Codigo);
 	void printNodos();
+	void insertarNodo_AVL(int codigo);
 
 
 private:

@@ -5,7 +5,6 @@
 
 int main()
 {
-
 	Sistema* sys = new Sistema();
 	sys->menuInicial();
 	delete sys;

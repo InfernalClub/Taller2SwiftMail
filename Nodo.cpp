@@ -3,9 +3,9 @@
 #include "Aduana.h"
 
 using namespace std;
-Arbol::Arbol()
+Arbol::~Arbol()
 {
-	
+	borrarAB(root);
 }
 void Arbol::insertarNodo(int Codigo)
 {
@@ -177,17 +177,29 @@ void Arbol::insertar(int codigo) {
 	root = insertarNodo_AVL(root, codigo);
 
 }
-hoja* Arbol::buscar(hoja* root, int valor) {
+hoja* Arbol::buscar(hoja* nodo, int valor) {
 
-	if (root==NULL ) {
+	if (nodo==NULL ) {
 		return NULL;
 	}
-	if (valor == root->Codigo) {
-		return root;
+	if (valor == nodo->Codigo) {
+		return nodo;
 	}
-	if (valor < root->Codigo) {
-		return buscar(root->hijizq, valor);
+	if (valor < nodo->Codigo) {
+		return buscar(nodo->hijizq, valor);
 	}
 	else
-		return buscar(root->hijoder, valor);
+		return buscar(nodo->hijoder, valor);
+}
+void Arbol::borrarAB(hoja* hoja) {
+	if (hoja == nullptr) {
+		return;
+	}
+	borrarAB(hoja->hijizq);
+	borrarAB(hoja->hijoder);
+	delete hoja;
+}
+void Arbol::combinar(int codigo) {
+
+	
 }

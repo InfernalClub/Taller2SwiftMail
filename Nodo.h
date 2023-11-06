@@ -36,7 +36,8 @@ public:
 	void printNodos();
 	hoja* insertarNodo_AVL(hoja* hoja,int codigo);
 	void insertar(int codigo);
-	hoja* buscar(hoja* r, int valor);
-
+	hoja* buscar(hoja* nodo, int valor);
+	void borrarAB(hoja* hoja);
+	void combinar(int codigo);
 
 };

@@ -123,4 +123,3 @@ void SistemaSMT::leer_archivo_sucursal()
 	archivo.close();
 }
 
-}

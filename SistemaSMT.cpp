@@ -84,7 +84,7 @@ void SistemaSMT::leer_archivo_sucursal()
 
 	//si el archivo falla
 	if (archivo.fail()) {
-		cout << "No se pudo abrir el archivo" << endl;
+		cout << "No se pudo abrir el archivo " << endl;
 		exit(1);
 	}
 
@@ -121,4 +121,6 @@ void SistemaSMT::leer_archivo_sucursal()
 
 	}
 	archivo.close();
+}
+
 }

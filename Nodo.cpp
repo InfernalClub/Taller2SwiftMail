@@ -177,3 +177,17 @@ void Arbol::insertar(int codigo) {
 	root = insertarNodo_AVL(root, codigo);
 
 }
+hoja* Arbol::buscar(hoja* root, int valor) {
+
+	if (root==NULL ) {
+		return NULL;
+	}
+	if (valor == root->Codigo) {
+		return root;
+	}
+	if (valor < root->Codigo) {
+		return buscar(root->hijizq, valor);
+	}
+	else
+		return buscar(root->hijoder, valor);
+}

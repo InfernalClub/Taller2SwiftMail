@@ -8,5 +8,4 @@ public:
 	void menuAduana();
 	void menuSucursal();
 
-
 };

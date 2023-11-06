@@ -12,7 +12,7 @@ void SistemaSMT::leer_archivo()
 
 	//si el archivo no existe
 	if (!archivo) {
-		cout << "Error al abrir el archivo: " << strerror(errno) << std::endl;
+		cout << "Error al abrir el archivo: " << strerror(errno) << endl;
 		return ;
 	}
 	archivo.open("Aduana1.txt");
@@ -116,8 +116,8 @@ void SistemaSMT::leer_archivo_sucursal()
 		catch (const exception& e) {
 			cout << "error en la conversion de valores" << e.what() << endl;
 		}
-
-		ArbolAVL.insertarNodo(codigo_paquete);
+		
+		ArbolAVL.insertar(codigo_paquete);
 
 	}
 	archivo.close();

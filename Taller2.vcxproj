@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ABB.cpp" />
     <ClCompile Include="Aduana.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Sistema.cpp" />
@@ -136,7 +135,6 @@
     <ClCompile Include="Taller2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ABB.h" />
     <ClInclude Include="Aduana.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="SistemaSMT.h" />
@@ -145,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\Downloads\Aduana1.txt" />
+    <Text Include="Sucursal1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

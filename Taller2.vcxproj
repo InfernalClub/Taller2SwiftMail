@@ -132,14 +132,12 @@
     <ClCompile Include="Sistema.cpp" />
     <ClCompile Include="SistemaSMT.cpp" />
     <ClCompile Include="Sucursal.cpp" />
-    <ClCompile Include="Taller2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aduana.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="SistemaSMT.h" />
     <ClInclude Include="Sucursal.h" />
-    <ClInclude Include="Taller2.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\Downloads\Aduana1.txt" />

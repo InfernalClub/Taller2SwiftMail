@@ -5,14 +5,12 @@
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Sistema.cpp" />
     <ClCompile Include="SistemaSMT.cpp" />
-    <ClCompile Include="Taller2.cpp" />
     <ClCompile Include="Sucursal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aduana.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="SistemaSMT.h" />
-    <ClInclude Include="Taller2.h" />
     <ClInclude Include="Sucursal.h" />
   </ItemGroup>
   <ItemGroup>

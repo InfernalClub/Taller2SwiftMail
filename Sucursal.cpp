@@ -1,6 +1,6 @@
 #include "Sucursal.h"
 
-Sucursal::Sucursal()
+Sucursal::Sucursal(string codigo_paquete,string codigo_SMT,string repartidor,int timepo_entrega)
 {
     this->codigo_paquete = codigo_paquete;
     this->codigo_SMT = codigo_SMT;
